@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { CompraRoutingModule } from './compra-routing.module';
 import { CompraComponent } from './compra.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { MatTableModule } from '@angular/material/table';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import { ReactiveFormsModule } from '@angular/forms';
   imports: [
     CommonModule,
     CompraRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatTableModule
   ]
 })
 export class CompraModule { }
