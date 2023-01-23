@@ -11,6 +11,7 @@ export class CompraComponent implements OnInit {
   coleccion = 'juguetes';
   juguetes: any[] = [];
   displayedColumns: string[] = ['ID', 'Nombre', 'Descripcion', 'Edad', 'Importe'];
+
   constructor(private firebase: ServicesService) { }
 
   ngOnInit(): void {
@@ -20,6 +21,7 @@ export class CompraComponent implements OnInit {
         resp.forEach( (juguetesSnapshot: any) => {
           this.juguetes.push(
             {
+              docId: juguetesSnapshot.payload.doc.id,
               ...juguetesSnapshot.payload.doc.data()
             }
           )
@@ -27,7 +29,6 @@ export class CompraComponent implements OnInit {
       }
     )
   }
-  rollback(): void{
     
-  }
+  
 }

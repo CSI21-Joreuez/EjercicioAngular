@@ -1,5 +1,6 @@
 export interface Juguete {
-id:number;
+    docId: string;
+    id:number;
     nombre:string;
     descripcion:string;
     importe:number;

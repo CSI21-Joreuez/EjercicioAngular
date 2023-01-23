@@ -5,17 +5,21 @@ import { CompraRoutingModule } from './compra-routing.module';
 import { CompraComponent } from './compra.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatTableModule } from '@angular/material/table';
+import { UtilidadesModule } from '../../../utilidades/utilidades.module';
+import { DetallesComponent } from './detalles/detalles.component';
 
 
 @NgModule({
   declarations: [
-    CompraComponent
+    CompraComponent,
+    DetallesComponent
   ],
   imports: [
     CommonModule,
     CompraRoutingModule,
     ReactiveFormsModule,
-    MatTableModule
+    MatTableModule,
+    UtilidadesModule
   ]
 })
 export class CompraModule { }
